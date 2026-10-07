@@ -9,3 +9,7 @@
   <a href="https://aistudio.google.com/apps">Start building</a>
 
 </div>
+
+## Education source packages
+
+- [Atlas Education — Global Learning (D01–D04)](education/atlas-global-learning/README.md): Google AI Build-ready course source package, build prompt, integrity manifest, and validation script.
