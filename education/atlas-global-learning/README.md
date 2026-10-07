@@ -23,3 +23,8 @@ Build-ready source package for the Atlas Education Global Learning application. 
 ## Preservation and release notes
 
 The six canonical JSON inputs are preserved exactly as supplied. The build prompt requires exact rendering, on-demand loading, a strict `scorePercent > 75` pass rule, and withholding answer keys/explanations/rubrics until submission. Do not claim accreditation, government approval, university credit, or external certification unless independently verified and authorized by Atlas Education. Complete the institutional pre-release gates before public release.
+
+
+## Master Google AI Build prompt
+
+Use [`GOOGLE_AI_BUILD_MASTER_PROMPT.md`](GOOGLE_AI_BUILD_MASTER_PROMPT.md) after importing this private repository into Google AI Studio Build or uploading the referenced files. The prompt requires source verification before implementation and blocks invented content if Build cannot access the private files.
