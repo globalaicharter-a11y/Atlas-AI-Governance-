@@ -13,3 +13,7 @@ Atlas AI Governance Platform provides Git-style version control, compliance stag
 
 ---
 *Initialized for enterprise governance lifecycle management.*
+
+## Education source package
+
+The Atlas Education Global Learning source data and Google AI Build instructions are in [`education/atlas-global-learning/`](education/atlas-global-learning/). The content is kept as data files and validated by `scripts/validate_package.py`.
