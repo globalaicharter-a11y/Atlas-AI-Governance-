@@ -1,15 +1,15 @@
-<div align="center">
+# Atlas AI Governance Platform
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+An enterprise repository and policy lifecycle system for trustworthy artificial intelligence, model risk management, EU AI Act compliance, and safety alignment.
 
-  <h1>Built with AI Studio</h2>
+## Overview
+Atlas AI Governance Platform provides Git-style version control, compliance stage-gates, and audit trails for machine learning models, system prompts, alignment guardrails, and risk assessments.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### Capabilities
+- **Model & Policy Repositories**: Git-versioned model cards, prompt architectures, and safety configurations.
+- **Regulatory Frameworks**: Automated mapping against EU AI Act, NIST AI RMF 1.0, and ISO/IEC 42001.
+- **Stage-Gate Deployment Approvals**: Multi-stakeholder sign-offs (Safety, Legal, Compliance, DPO).
+- **Audit Ledger**: Immutable change history with cryptographic commit verification.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
-
-</div>
-
-## Education source packages
-
-- [Atlas Education — Global Learning (D01–D04)](education/atlas-global-learning/README.md): Google AI Build-ready course source package, build prompt, integrity manifest, and validation script.
+---
+*Initialized for enterprise governance lifecycle management.*

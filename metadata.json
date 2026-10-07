@@ -1,0 +1,6 @@
+{
+  "name": "Atlas AI Governance Platform",
+  "description": "Enterprise AI model and policy repository platform for risk classification, regulatory compliance, and deployment gate governance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
