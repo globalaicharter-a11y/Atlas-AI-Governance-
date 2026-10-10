@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { initialRepositories, standardStarterTemplates } from './data/governanceData';
-import { GovernanceRepository, GovernanceFile, StageGate, ComplianceCheck, GitCommit } from './types';
+import { GovernanceRepository, GovernanceFile, StageGate, ComplianceCheck, GitCommit, PlatformTab } from './types';
 import { Sidebar } from './components/Sidebar';
 import { TopBar } from './components/TopBar';
 import { RepoHeader } from './components/RepoHeader';
@@ -17,11 +17,12 @@ import { ComplianceMatrixView } from './components/ComplianceMatrixView';
 import { GitCliView } from './components/GitCliView';
 import { NewRepoModal } from './components/NewRepoModal';
 import { CloneModal } from './components/CloneModal';
+import { CertificateView } from './components/CertificateView';
 
 export default function App() {
   const [repositories, setRepositories] = useState<GovernanceRepository[]>(initialRepositories);
   const [currentRepoId, setCurrentRepoId] = useState<string>('repo-atlas-governance');
-  const [activeTab, setActiveTab] = useState<'files' | 'commits' | 'gates' | 'compliance' | 'cli'>('files');
+  const [activeTab, setActiveTab] = useState<PlatformTab>('files');
   const [isNewRepoModalOpen, setIsNewRepoModalOpen] = useState(false);
   const [isCloneModalOpen, setIsCloneModalOpen] = useState(false);
 
@@ -465,6 +466,7 @@ export default function App() {
           {activeTab === 'cli' && (
             <GitCliView repo={currentRepo} />
           )}
+          {activeTab === 'certificate' && <CertificateView />}
         </main>
       </div>
 

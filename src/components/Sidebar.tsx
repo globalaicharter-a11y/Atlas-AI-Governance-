@@ -10,16 +10,17 @@ import {
   ExternalLink,
   Lock,
   Layers,
-  CircleDot
+  CircleDot,
+  Award
 } from 'lucide-react';
-import { GovernanceRepository } from '../types';
+import { GovernanceRepository, PlatformTab } from '../types';
 
 interface SidebarProps {
   repositories: GovernanceRepository[];
   currentRepoId: string;
   onSelectRepo: (id: string) => void;
-  activeTab: 'files' | 'commits' | 'gates' | 'compliance' | 'cli';
-  setActiveTab: (tab: 'files' | 'commits' | 'gates' | 'compliance' | 'cli') => void;
+  activeTab: PlatformTab;
+  setActiveTab: (tab: PlatformTab) => void;
   onOpenNewRepo: () => void;
 }
 
@@ -105,6 +106,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
           >
             <CheckCircle2 className="w-4 h-4 text-indigo-400" />
             <span>Compliance Matrix</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('certificate')}
+            className={`w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-left transition-colors ${
+              activeTab === 'certificate'
+                ? 'bg-slate-800 text-white font-medium'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
+            }`}
+          >
+            <Award className="w-4 h-4 text-amber-300" />
+            <span>Certificates</span>
           </button>
 
           <button

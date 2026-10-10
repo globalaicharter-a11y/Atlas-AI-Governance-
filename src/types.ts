@@ -2,6 +2,8 @@ export type RiskTier = 'Unacceptable' | 'High-Risk' | 'Specific Transparency' | 
 
 export type ComplianceFramework = 'EU AI Act' | 'NIST AI RMF 1.0' | 'ISO/IEC 42001' | 'OWASP Top 10 for LLM';
 
+export type PlatformTab = 'files' | 'commits' | 'gates' | 'compliance' | 'cli' | 'certificate';
+
 export interface GovernanceFile {
   id: string;
   name: string;

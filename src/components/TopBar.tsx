@@ -1,11 +1,11 @@
 import React from 'react';
 import { GitBranch, GitFork, Download, Plus, Terminal } from 'lucide-react';
-import { GovernanceRepository } from '../types';
+import { GovernanceRepository, PlatformTab } from '../types';
 
 interface TopBarProps {
   currentRepo: GovernanceRepository;
-  activeTab: 'files' | 'commits' | 'gates' | 'compliance' | 'cli';
-  setActiveTab: (tab: 'files' | 'commits' | 'gates' | 'compliance' | 'cli') => void;
+  activeTab: PlatformTab;
+  setActiveTab: (tab: PlatformTab) => void;
   onOpenNewRepo: () => void;
   onOpenCloneModal: () => void;
   onToggleBranch: (branch: string) => void;
@@ -73,6 +73,16 @@ export const TopBar: React.FC<TopBarProps> = ({
           }`}
         >
           Compliance Matrix
+        </button>
+        <button
+          onClick={() => setActiveTab('certificate')}
+          className={`px-3 py-1 text-xs font-medium rounded-md transition-colors whitespace-nowrap ${
+            activeTab === 'certificate'
+              ? 'bg-slate-800 text-white shadow-xs'
+              : 'text-slate-400 hover:text-slate-200'
+          }`}
+        >
+          Certificates
         </button>
         <button
           onClick={() => setActiveTab('cli')}
